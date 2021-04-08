@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+    font-size: 18px;
+    --primary: #42E2B8;
+    --gradient: linear-gradient(135deg, #FAD7A1 0%, #E96D71 100%);
+}
+
+body{
+  font-family: 'Oxygen', sans-serif;
+  background: var(--gradient);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Desktop Styles */
+.wrapper {
+  max-inline-size: 1132px;
+  margin: auto;
+}
+h1{
+  font-size: 59px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95px;
+  margin-block: 0;
+}
+h4{
+  font-size: 18px;
+  font-style: normal;
+  line-height: 25px;
+  margin-block: 0;
+
+}
+p{
+  font-size: 16px;
+}
+.description{
+  margin: 0;
+  text-align: center;
+  padding: 30px 16px;
+
+}
+.cipher{
+  display: flex;
+  flex-direction: column;
+  padding: 16px 30px;
+  margin-block-end: 150px;
+}
+#offSet, #textArea, #result{
+  border: 1px solid #0F0A0A;
+  box-sizing: border-box;
+  filter: drop-shadow(-4px 4px 14px rgba(0, 0, 0, 0.25));
+  border-radius: 8px;
+  background-color:  rgba(255, 255, 255, 0.2);
+  color:#0F0A0A;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
+  padding-block:10px ;
+  padding-inline: 16px;
+  margin: 10px 10px;
+
+}
+#textArea{
+  height: 150px;
+}
+
+.group-button, .group-copy, .whatsapp-color{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.group-button img{
+  height: 30px;
+  width: 30px;
+}
+.buttonGreen{
+
+  box-sizing: border-box;
+  box-shadow: -4px 4px 14px rgba(0, 0, 0, 0.25);
+  border-radius: 90px;
+  padding-block:10px ;
+  padding-inline: 16px;
+  margin: 10px 10px;
+  font-weight: 700;
+}
+.with-color{
+  background: #42E2B8;
+  border: 2px solid #0F0A0A;
+}
+.wout-color{
+  background: #0F0A0A;
+  border: 2px solid #42E2B8;
+  color: #42E2B8;
+}
+.whatsapp-color{
+  background: #00bb2d;
+  border: 1px solid #0F0A0A;
+  color: #0F0A0A;
+  align-content: center;
+  justify-content: center;
+
+
+}
+.group-copy p{
+  text-decoration-line: underline;
+}
+.group-copy img, .standart-img{
+  height: 18px;
+  margin-inline: 8px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 500px) {
+  body{
+    padding: 1em;
+  }
+  .main-content {
+    padding-block-start: 0;
+    margin: 0px;
+    /* padding-inline: 16px; */
+  }
+  .cipher{
+    margin-block-end: 50px;
+  }
+
+}

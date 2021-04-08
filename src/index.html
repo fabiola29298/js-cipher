@@ -5,12 +5,49 @@
   <meta charset="utf-8">
   <title>Caesar Cipher</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
 </head>
 
 <body>
-  <div id="root">
-    <h1>Hello world!</h1>
+
+
+  <div class="main">
+    <div class="wrapper">
+
+      <div class="description">
+        <h1>CIPHER</h1>
+        <h4>Caesar Cipher Encoding is a simple method of encoding messages.</h4>
+      </div>
+
+      <div class="cipher">
+        <p>Enter the offset (number only)*</p>
+        <input type="number" id="offSet" placeholder="Offset">
+        <p>Enter text*</p>
+        <textarea id="textArea" placeholder="Text to be encoded"></textarea>
+        <div class="group-button">
+
+          <button type="button" class="buttonGreen with-color" id="encryptButton">Encrypt</button>
+          <img src="./img/intercambiar.svg" alt="icon intercambiar">
+          <button type="button" class="buttonGreen wout-color" id="decryptButton">Decrypt</button>
+        </div>
+        <p>Message</p>
+        <div contentEditable=true data-text="Encoded Message" id="result"></div>
+        <div class="group-copy">
+          <p>Copy message</p>
+          <img src="./img/copy.svg" alt="copy">
+        </div>
+        <button type="button" class="buttonGreen whatsapp-color" id="decryptButton">
+          <img src="./img/whatsapp.svg"  class="standart-img" alt="">
+          Send to WhatsApp</button>
+      </div>
+    </div>
   </div>
+
+
+
   <script src="cipher.js"></script>
   <script src="index.js" type="module"></script>
 </body>
