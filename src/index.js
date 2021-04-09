@@ -8,10 +8,10 @@ let textArea = document.getElementById("textArea");
 let result = document.getElementById("result");
 
 const btnEncrypt = document.getElementById("encryptButton");
-const btnDecrypt = document.getElementById("decryptButton");
+// const btnDecrypt = document.getElementById("decryptButton");
 
 const btnCopy = document.getElementById("copyButton");
-const btnSend = document.getElementById("whatsappButton");
+// const btnSend = document.getElementById("whatsappButton");
 const btnExchange = document.getElementById("exchangeButton");
 
 
