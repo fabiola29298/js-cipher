@@ -49,20 +49,21 @@ p{
   flex-direction: column;
   padding: 16px 30px;
   margin-block-end: 150px;
+
 }
 #offSet, #textArea, #result{
   border: 1px solid #0F0A0A;
   box-sizing: border-box;
   filter: drop-shadow(-4px 4px 14px rgba(0, 0, 0, 0.25));
   border-radius: 8px;
-  background-color:  rgba(255, 255, 255, 0.2);
+  /* background-color:  rgba(255, 255, 255, 0.2); */
+  background: #FFFFFF;
   color:#0F0A0A;
   font-family: 'Oxygen', sans-serif;
   font-size: 16px;
   padding-block:10px ;
   padding-inline: 16px;
   margin: 10px 10px;
-
 }
 #textArea{
   height: 150px;
@@ -106,6 +107,14 @@ p{
 
 
 }
+.copy-color{
+  background: #FAD7A1;
+  border: 1px solid #0F0A0A;
+  color: #0F0A0A;
+
+
+
+}
 .group-copy p{
   text-decoration-line: underline;
 }
@@ -113,6 +122,16 @@ p{
   height: 18px;
   margin-inline: 8px;
 }
+
+#result{
+  display: flex;
+  width: 100%;
+  align-self: center;
+}
+#copyButton{
+  margin-inline-start: 40%;
+}
+
 
 /* Mobile Styles */
 @media only screen and (max-width: 500px) {
@@ -129,3 +148,44 @@ p{
   }
 
 }
+
+ /* tooltip   */
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+/* Fin de tooltip   */

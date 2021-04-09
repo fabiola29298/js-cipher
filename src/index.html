@@ -24,22 +24,27 @@
 
       <div class="cipher">
         <p>Enter the offset (number only)*</p>
-        <input type="number" id="offSet" placeholder="Offset">
+        <input type="number" required  id="offSet" placeholder="Offset">
         <p>Enter text*</p>
-        <textarea id="textArea" placeholder="Text to be encoded"></textarea>
+        <textarea id="textArea" required placeholder="Text to be encoded"></textarea>
         <div class="group-button">
 
           <button type="button" class="buttonGreen with-color" id="encryptButton">Encrypt</button>
-          <img src="./img/intercambiar.svg" alt="icon intercambiar">
+          <img src="./img/intercambiar.svg" alt="icon intercambiar" id="exchangeButton">
           <button type="button" class="buttonGreen wout-color" id="decryptButton">Decrypt</button>
         </div>
         <p>Message</p>
-        <div contentEditable=true data-text="Encoded Message" id="result"></div>
-        <div class="group-copy">
+        <div id="box-result" >
+          <input  id="result" value="">  </input>
+        </div>
+        <div class="tooltip group-copy">
+        <button  type="button" class="group-copy buttonGreen copy-color" id="copyButton" >
+          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
           <p>Copy message</p>
           <img src="./img/copy.svg" alt="copy">
+        </button>
         </div>
-        <button type="button" class="buttonGreen whatsapp-color" id="decryptButton">
+        <button type="button" class="buttonGreen whatsapp-color" id="whatsappButton">
           <img src="./img/whatsapp.svg"  class="standart-img" alt="">
           Send to WhatsApp</button>
       </div>
