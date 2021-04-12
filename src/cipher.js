@@ -14,6 +14,14 @@ const cipher = {
           ((charAscii - 65 + parseInt(key)) % 26) + 65);
         // console.log(encryptToMessage);
       }
+      else if (charAscii >= 97 && charAscii <= 122) {
+        // lower case letter range
+        encryptToMessage += String.fromCharCode(
+          ((charAscii - 97 + parseInt(key)) % 26) + 97);
+      } else {
+        //different signs and characters are copied
+        encryptToMessage += charAscii.charAt(i);
+      }
     }
     return encryptToMessage;
   },
@@ -29,6 +37,12 @@ const cipher = {
       if (charAscii >= 65 && charAscii <= 90 ) {
         encryptToMessage += String.fromCharCode(
           ((charAscii + 65 - parseInt(key)) % 26) + 65);
+      }
+      else if (charAscii >= 97 && charAscii <= 122) {
+        encryptToMessage += String.fromCharCode(
+          ((charAscii - 97 - parseInt(key) + 52) % 26) + 97);
+      } else {
+        encryptToMessage += charAscii.charAt(i);
       }
     }
     return encryptToMessage;
