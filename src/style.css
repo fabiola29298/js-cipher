@@ -51,7 +51,7 @@ p{
   margin-block-end: 150px;
 
 }
-#offSet, #textArea, #result{
+#offSet, #textArea, #result, #numberCellphone{
   border: 1px solid #0F0A0A;
   box-sizing: border-box;
   filter: drop-shadow(-4px 4px 14px rgba(0, 0, 0, 0.25));
@@ -131,6 +131,13 @@ p{
 #copyButton{
   margin-inline-start: 40%;
 }
+ /* send whatssapp */
+.group-whatsapp{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 
 
 /* Mobile Styles */
@@ -145,6 +152,16 @@ p{
   }
   .cipher{
     margin-block-end: 50px;
+  }
+  #copyButton {
+      margin-inline-start: 0;
+      margin-inline-start: 20%;
+  }
+   /* send whatssapp */
+  .group-whatsapp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
 }

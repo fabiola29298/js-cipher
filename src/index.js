@@ -63,9 +63,9 @@ btnCopy.addEventListener('click', () => {
 });
 
 btnSend.addEventListener('click', () => {
-  console.log('gola');
-  var yourNumber = "558186580524";
-  var yourMessage = "testing";
+  let numberWhatsapp = document.getElementById("numberCellphone");
+  var yourNumber = numberWhatsapp.value;
+  var yourMessage = result.value;
   let url = getLinkWhastapp(yourNumber, yourMessage);
   window.open(url, '_blank').focus();
   // var win = window.open(`https://wa.me/${num}?text=I%27m%20api%20msg%20hello%20${name}%20friend%20${msg}`, '_blank');
