@@ -4,6 +4,10 @@ const cipher = {
     if( typeof(text) != "string" || typeof(key)!= "number"){
       throw new TypeError("El texto no es válido");
     }
+    // catch offset negativo
+    if(key <0){
+      key += 26;
+    }
 
     let encryptToMessage = ""; // new message
     for (let i = 0; i < text.length; i++) {
@@ -29,6 +33,10 @@ const cipher = {
   decode: function (key, text) {
     if (typeof (text) != "string" || typeof (key) != "number") {
       throw new TypeError("El texto no es válido");
+    }
+    // catch offset negativo
+    if (key < 0) {
+      key += 26;
     }
     let encryptToMessage = ""; // new message
 
