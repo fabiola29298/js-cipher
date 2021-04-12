@@ -20,7 +20,7 @@ const cipher = {
           ((charAscii - 97 + parseInt(key)) % 26) + 97);
       } else {
         //different signs and characters are copied
-        encryptToMessage += charAscii.charAt(i);
+        encryptToMessage += text.charAt(i);
       }
     }
     return encryptToMessage;
@@ -42,7 +42,7 @@ const cipher = {
         encryptToMessage += String.fromCharCode(
           ((charAscii - 97 - parseInt(key) + 52) % 26) + 97);
       } else {
-        encryptToMessage += charAscii.charAt(i);
+        encryptToMessage += text.charAt(i);
       }
     }
     return encryptToMessage;
