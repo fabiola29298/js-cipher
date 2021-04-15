@@ -78,7 +78,7 @@ describe('cipher', () => {
     });
 
     it('should return "VANESA ADRIANA" for "CHULZH HKYPHUH" with offset 33', () => {
-      expect(cipher.encode(33, 'CHULZH HKYPHUH')).toBe('VANESA ADRIANA');
+      expect(cipher.decode(33, 'CHULZH HKYPHUH')).toBe('VANESA ADRIANA');
     });
 
     it('should return "abcdefghijklmnopqrstuvwxyz" for "hijklmnopqrstuvwxyzabcdefg" with offset 33', () => {
@@ -86,7 +86,7 @@ describe('cipher', () => {
     });
 
     it('should return "vanesa adriana" for "chulzh hkyphuh" with offset 33', () => {
-      expect(cipher.encode(33, 'chulzh hkyphuh')).toBe('vanesa adriana');
+      expect(cipher.decode(33, 'chulzh hkyphuh')).toBe('vanesa adriana');
     });
 
     it('should return " !@" para " !@"', () => {
@@ -94,15 +94,15 @@ describe('cipher', () => {
     });
 
     it('should return "Hola! @Elon" for "Ovsh! @Lsvu"', () => {
-      expect(cipher.encode(33, 'Ovsh! @Lsvu')).toBe('Hola! @Elon');
+      expect(cipher.decode(33, 'Ovsh! @Lsvu')).toBe('Hola! @Elon');
     });
 
     it('should return "Hola! @Elon" for "Gnkz @?Dknm"', () => {
-      expect(cipher.encode(-1, 'Gnkz @?Dknm')).toBe('Hola! @Elon');
+      expect(cipher.decode(-1, 'Gnkz @?Dknm')).toBe('Hola! @Elon');
     });
 
     it('should return "Hola! @Elon" for "Cjgv=<;Zgji"', () => {
-      expect(cipher.encode(-5, 'Cjgv=<;Zgji')).toBe('Hola! @Elon');
+      expect(cipher.decode(-5, 'Cjgv=<;Zgji')).toBe('Hola! @Elon');
     });
   });
 
